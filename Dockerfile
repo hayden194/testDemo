@@ -3,7 +3,7 @@ FROM openjdk:8-jdk-alpine
 #镜像的制作人
 MAINTAINER Hayden/haydenguo@apjcorp.com
 #工作目录
-WORKDIR /app/
+WORKDIR /
 #在容器中创建挂载点，可以多个
 #VOLUME ["/tmp"]
 #声明了容器应该打开的端口并没有实际上将它打开
