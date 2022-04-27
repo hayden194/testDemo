@@ -1,0 +1,14 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.6'
+    - name: Display Python version
+      run: python --version
+    - name: Install dependences
+      run: pip install requests
+    - name: Check IP info by httpbin.org
+      run: python env_check_flow.py
