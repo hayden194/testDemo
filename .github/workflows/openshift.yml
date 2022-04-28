@@ -36,7 +36,7 @@ env:
   OPENSHIFT_NAMESPACE: "hayden-githubDemo-code"
 
   # 🖊️ EDIT to set a name for your OpenShift app, or a default one will be generated below.
-  APP_NAME: "haydenGithubDemo"
+  APP_NAME: "haydengithubdemo"
 
   # 🖊️ EDIT with the port your application should be accessible on.
   # If the container image exposes *exactly one* port, this can be left blank.
@@ -56,13 +56,13 @@ on:
   # https://docs.github.com/en/actions/reference/events-that-trigger-workflows
   push:
     # Edit to the branch(es) you want to build and deploy on each push.
-    branches: [ master ]
+    branches: [ hayden194-maven-1 ]
 
 jobs:
   openshift-ci-cd:
     name: Build and deploy to OpenShift
     # ubuntu-20.04 can also be used.
-    runs-on: ubuntu-18.04
+    runs-on: windows-latest
     environment: production
 
     outputs:
