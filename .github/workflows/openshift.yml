@@ -42,6 +42,9 @@ env:
   # If the container image exposes *exactly one* port, this can be left blank.
   # Refer to the 'port' input of https://github.com/redhat-actions/oc-new-app
   APP_PORT: ""
+  
+  image: docker-registry.default.svc:5000/openshift/redhat-openjdk18-openshift:1.4
+  tags: v1 v1.0.0
 
   # 🖊️ EDIT to change the image registry settings.
   # Registries such as GHCR, Quay.io, and Docker Hub are supported.
