@@ -1,0 +1,27 @@
+name: push-to-docker
+env:
+  REGISTRY: docker.io/tetchel
+  REGISTRY_USER: tetchel
+  REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+  APP_PORT: 3009
+  APP_NAME: ""
+  TAG: ""
+  
+on:
+jobs:
+  push-to-docker-job:
+    name: push to docker job
+    runs-on: [ unbuntu.latest ]
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Push to registry
+      id: push-to-registry
+      uses: redhat-actions/push-to-registry@v2
+      with:
+        image: ${{ env.APP_NAME }}
+        tags: ${{ env.TAG }}
+        registry: ${{ env.REGISTRY }}
+        username: ${{ env.REGISTRY_USER }}
+        password: ${{ env.REGISTRY_PASSWORD }}
