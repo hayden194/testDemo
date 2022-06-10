@@ -6,7 +6,7 @@ on:
 jobs:
   test-download-nodejs-job:
     #name: push to docker job
-    runs-on: [ unbuntu.latest ]
+    runs-on: unbuntu.latest
 
     steps:
     - uses: actions/checkout@v2
