@@ -1,4 +1,7 @@
-on: [push]
+name: test-action-workflow
+  
+on:
+  workflow_dispatch:
 
 jobs:
   hello_world_job:
@@ -7,7 +10,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: octocat/hello-world-javascript-action@v1.1
+        uses: hayden194/hello-world-javascript-action-1@v1.1
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
