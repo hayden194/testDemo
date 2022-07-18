@@ -53,10 +53,7 @@ env:
   IMAGE_TAGS: ""
 
 on:
-  # https://docs.github.com/en/actions/reference/events-that-trigger-workflows
-  push:
-    # Edit to the branch(es) you want to build and deploy on each push.
-    branches: [ test ]
+  workflow_dispatch: 
 
 jobs:
   openshift-ci-cd:
