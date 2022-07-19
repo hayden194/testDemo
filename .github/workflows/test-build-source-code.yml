@@ -7,10 +7,6 @@ jobs:
   build_source_code_job:
     runs-on: ubuntu-latest
     steps:
-      - name: test data
-        run: |
-          echo $GITHUB_ACTOR****
-          echo $GITHUB_WORKSPACE^^^^^^^
       - uses: actions/checkout@v3
         with:
           path: $GITHUB_ACTOR
@@ -21,7 +17,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - uses: hayden194/build-source-code@v1.8
+      - uses: hayden194/build-source-code@v1.9
         with:
           WORKSPACE: $GITHUB_WORKSPACE
           JAR_VERSION: '0.1.2.SNAPSHOT'  
