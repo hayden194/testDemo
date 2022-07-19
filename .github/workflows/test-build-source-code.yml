@@ -18,6 +18,6 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - uses: hayden194/build-source-code@v1.8
+      - uses: hayden194/build-source-code@v1.9
         with:
           JAR_VERSION: '0.1.2.SNAPSHOT'  
