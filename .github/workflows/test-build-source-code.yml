@@ -20,4 +20,5 @@ jobs:
 
       - uses: hayden194/build-source-code@v1.6
         with:
+          WORKSPACE: $GITHUB_WORKSPACE
           JAR_VERSION: '0.1.2.SNAPSHOT'  
