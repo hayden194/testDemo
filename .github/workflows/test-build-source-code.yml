@@ -7,7 +7,10 @@ jobs:
   build_source_code_job:
     runs-on: ubuntu-latest
     steps:
-
+      - name: test data
+        run: |
+          echo $GITHUB_ACTOR****
+          echo $GITHUB_WORKSPACE^^^^^^^
       - uses: actions/checkout@v3
         with:
           path: $GITHUB_ACTOR
