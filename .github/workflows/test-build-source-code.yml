@@ -21,7 +21,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - uses: hayden194/build-source-code@v1.7
+      - uses: hayden194/build-source-code@v1.8
         with:
           WORKSPACE: $GITHUB_WORKSPACE
           JAR_VERSION: '0.1.2.SNAPSHOT'  
